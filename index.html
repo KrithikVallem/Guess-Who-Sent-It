@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess Who Sent It!</title>
+
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/sakura-vader.css" type="text/css">
+
+    <!-- Don't async defer data because it MUST load before index -->
+    <script src="data/data.js"></script>
+    <script src="other/instagram-embed.js"></script> <!--Needed to include this myself to get reels embeds to work-->
+
+    <script async defer src="index.js"></script>
+</head>
+<body>
+    <h1>Guess Who Sent It!</h1>
+    <h3 id="score"></h3>
+    <div id="choices-container">
+        <select name="people" id="people"></select>
+        <button id="guess">Guess!</button>
+    </div>
+    <div id="content-container">
+        <div id="reel-container"></div>
+        <div id="image-container">
+            <img id="image" src="">
+        </div>
+        <div id="quote-container">
+            <blockquote>
+                <p id="quote"></p>
+            </blockquote>
+        </div>
+        
+    </div>
+</body>
+</html>

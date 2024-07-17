@@ -1,0 +1,47 @@
+/* Hide these all at the beginning */
+#reel-container, #image-container, #quote-container {
+    display: none;
+}
+
+/* Center everything */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Make dropdown + button wider and taller and more mobile-friendly */
+#choices-container {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+#choices-container * {
+    text-align: center;
+    width: 40%;
+    margin: 5px;
+}
+
+/* Reduce space around score */
+#score {
+    margin: 1px;
+}
+
+/* Answer stuff */
+#answer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.correct-answer {
+    color: lightgreen;
+}
+.wrong-answer {
+    color: coral;
+}
+#next {
+    width: 100%;
+}
+#reset-score {
+    margin-top: 100px;
+}
