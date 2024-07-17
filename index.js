@@ -72,18 +72,16 @@ function populateContentContainer(content) {
 
 function makeAnswerContainerHtml(message, className) {
     return `
-    <div id="answer-container">
         <h3 id="answer-message" class="${className}">${message}</h3>
         <button id="next" onclick="location.reload()">Get Next</button>
         <button id="reset-score" onclick="resetScore()">Reset Score</button>
-    </div>
     `
 }
 
 function addGuessHandler(personAnswer) {
     // get html elems
     const guessBtn = document.getElementById('guess');
-    const contentContainer = document.getElementById('content-container');
+    const answerContainer = document.getElementById('answer-container');
 
     guessBtn.addEventListener('click', () => {
         // Ensure only 1 guess per question
@@ -115,7 +113,7 @@ function addGuessHandler(personAnswer) {
         }
 
         // Make answer visible and hide everything else
-        contentContainer.innerHTML = makeAnswerContainerHtml(message, className);
+        answerContainer.innerHTML = makeAnswerContainerHtml(message, className);
         // Change score elem and in localStorage
         setScore([numCorrect, numAnswered], className);
     });
